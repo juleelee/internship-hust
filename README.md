@@ -367,7 +367,7 @@ This section covers the differences when using the Spacetime method, which allow
 本节介绍了使用 Spacetime 方法时的差异，该方法通过加入时间维度来实现 4D 渲染。该方法为动态场景提供了更强的渲染能力。
 
 
-#### 1. Differences in File Structures 
+### 1. Differences in File Structures 
 
 - **Original (原始)**:
   - The original file structure includes basic elements like `point_cloud`, `cameras`, and `cfg_args`, with configurations tailored for static scene rendering.
@@ -376,7 +376,7 @@ This section covers the differences when using the Spacetime method, which allow
   - The Spacetime version modifies the `cfg_args` and `point_cloud` structures to handle motion data and other dynamic scene elements, enabling the system to process time-variant inputs.
 
 
-#### 2. Differences in Configuration Arguments
+### 2. Differences in Configuration Arguments
 
 - **Original (原始)**:
   - The original `cfg_args` is configured for a standard 3D scene, with basic options set for static rendering.
@@ -386,13 +386,30 @@ This section covers the differences when using the Spacetime method, which allow
 
 ![Differences in Spacetime Configuration](presentation/25.jpg)
 
----
+
+
+### 3. Differences GaussianView.hpp
+
+- **Original (原始)**:
+
+
+- **Spacetime (Spacetime)**:
+
+
+![Differences in Spacetime Configuration](presentation/26.jpg)
 
 
 
+### 4. Differences GaussianView.cpp
 
 
+- **Original (原始)**:
 
+
+- **Spacetime (Spacetime)**:
+
+
+![Differences in Spacetime Configuration](presentation/27.jpg)
 
 
 
