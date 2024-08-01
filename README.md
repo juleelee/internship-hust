@@ -268,3 +268,47 @@ This section highlights the differences in the `main.cpp` file between the origi
 
 ![Differences in main.cpp](presentation/17.jpg)
 ---
+### Differences in `GaussianView.cpp`
+
+#### Differences in `RichPoint` and `AnchorPoint` Structs (19.jpg)
+
+This section highlights the differences in the `GaussianView.cpp` file, particularly focusing on the `RichPoint` and `AnchorPoint` structs, as well as the parameter list and constructor in the original versus the scaffold version.
+
+本节重点介绍了 `GaussianView.cpp` 文件中的差异，特别是 `RichPoint` 和 `AnchorPoint` 结构体，以及原始版本和脚手架版本中的参数列表和构造函数。
+
+- **Original (原始)**:
+  - The `RichPoint` struct includes basic properties like position, scale, and rotation.
+  - The parameters and constructor are simpler, with fewer attributes.
+
+- **Scaffold (脚手架)**:
+  - The `AnchorPoint` struct introduces additional properties such as normal, offset, and features, allowing for more complex rendering.
+  - The parameters and constructor are extended to include these additional properties, providing more flexibility in the rendering process.
+
+![Differences in GaussianView.cpp](presentation/19.jpg)
+
+---
+
+### Differences in `onRenderIBR` Function (20.jpg)
+
+#### Steps Comparison in `onRenderIBR` Function
+
+This section compares the steps involved in the `onRenderIBR` function between the original and scaffold versions in the `GaussianView.cpp` file. The scaffold version includes more detailed operations for handling and processing the Gaussian splats.
+
+本节比较了 `GaussianView.cpp` 文件中 `onRenderIBR` 函数的原始版本和脚手架版本中的步骤。脚手架版本包括更多详细的操作，用于处理和处理高斯斑点。
+
+- **Original (原始)**:
+  - The original `onRenderIBR` function follows a straightforward process, focusing on basic operations like view matrix conversion, rasterization, and CUDA error handling.
+
+- **Scaffold (脚手架)**:
+  - The scaffold version of `onRenderIBR` adds several additional steps such as filtering visible Gaussians, computing view parameters, and calculating neural opacity, leading to a more refined and controlled rendering process.
+
+![Differences in onRenderIBR](presentation/20.jpg)
+
+
+
+
+
+
+
+
+
