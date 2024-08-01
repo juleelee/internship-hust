@@ -223,13 +223,33 @@ This section outlines the detailed steps involved in the rendering process, incl
    - Manage any potential errors that occur during CUDA operations.
 
 ![Rendering Process](presentation/13.jpg)
------
+---
 
 ## Scaffold Differences (差异)
+
+![Scaffold Differences](presentation/15.jpg)
 
 This section introduces the differences related to the scaffold in the SIBR project. The term "scaffold" here refers to the structure or framework used to organize and process the rendering data.
 
 本节介绍了 SIBR 项目中与脚手架相关的差异。这里的“脚手架”一词是指用于组织和处理渲染数据的结构或框架。
 
-![Scaffold Differences](presentation/15.jpg)
 ---
+
+## Differences in Scaffold (差异)
+
+This section highlights the differences between the original setup and the scaffold setup in the SIBR project, particularly focusing on the `point_cloud` and `cfg_args` files.
+
+本节重点介绍了 SIBR 项目中原始设置与脚手架设置之间的差异，特别是 `point_cloud` 和 `cfg_args` 文件的差异。
+
+- **Original (原始)**:
+  - The original `point_cloud` file contains various properties like vertex positions, normal vectors, and colors.
+  - The `cfg_args` file in the original setup specifies paths, resolution, and other rendering parameters.
+
+- **Scaffold (脚手架)**:
+  - The scaffold `point_cloud` file includes additional properties such as offsets and anchor features.
+  - The `cfg_args` file in the scaffold setup includes more complex parameters, allowing for additional customization in the rendering process.
+
+![Differences](presentation/16.jpg)
+
+---
+
