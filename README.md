@@ -412,7 +412,7 @@ This section covers the differences when using the Spacetime method, which allow
 ![Differences in Spacetime Configuration](presentation/27.jpg)
 
 
-### Differences: onRenderIBR Function
+## Differences: onRenderIBR Function
 
 The `onRenderIBR` function differs between the original implementation and the Spacetime implementation. The steps in each version are outlined below:
 
@@ -445,4 +445,24 @@ The `onRenderIBR` function differs between the original implementation and the S
 11. CUDA Error Management (CUDA错误管理)
 
 ![Differences in onRenderIBR Function](presentation/28.jpg)
+
+
+## Differences in Submodule Folder: GPU-Accelerated Calculations
+
+The submodule folder contains the `.cu` files, which enable fast calculations using the GPU. Below are the differences observed between the Original and Spacetime implementations.
+
+`submodule` 文件夹包含 `.cu` 文件，这些文件使用 GPU 进行快速计算。以下是原始实现和 Spacetime 实现之间的差异。
+
+### Original Implementation (原始实现)
+
+- The folder contains various `.cu` files such as `forward.cu`, `backward.cu`, `rasterizer_impl.cu`, and their corresponding headers like `forward.h`, `backward.h`, and `rasterizer.h`.
+- The structure shows the organization of these files, with each `.cu` file responsible for specific GPU-accelerated tasks.
+
+### Spacetime Implementation (Spacetime实现)
+
+- The structure is similar to the original but includes modifications that are likely optimized for Spacetime-specific calculations.
+- The `.cu` files and headers are present, but there might be changes in how these files are used or in their content, to handle the 4D rendering tasks.
+
+![Differences in Submodule Folder](presentation/29.jpg)
+
 
