@@ -223,3 +223,13 @@ This section outlines the detailed steps involved in the rendering process, incl
    - Manage any potential errors that occur during CUDA operations.
 
 ![Rendering Process](presentation/13.jpg)
+-----
+
+## Scaffold Differences (差异)
+
+This section introduces the differences related to the scaffold in the SIBR project. The term "scaffold" here refers to the structure or framework used to organize and process the rendering data.
+
+本节介绍了 SIBR 项目中与脚手架相关的差异。这里的“脚手架”一词是指用于组织和处理渲染数据的结构或框架。
+
+![Scaffold Differences](presentation/15.jpg)
+---
