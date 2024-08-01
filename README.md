@@ -252,4 +252,19 @@ This section highlights the differences between the original setup and the scaff
 ![Differences](presentation/16.jpg)
 
 ---
+## Differences in `main.cpp` (差异)
 
+This section highlights the differences in the `main.cpp` file between the original and scaffold setups in the SIBR project.
+
+本节重点介绍了 SIBR 项目中 `main.cpp` 文件在原始设置和脚手架设置之间的差异。
+
+- **Original (原始)**:
+  - The original code handles basic configuration arguments like `source_path`, `sh_degree`, and `white_background`.
+  - The creation of the ULR view is straightforward, without additional parameters.
+
+- **Scaffold (脚手架)**:
+  - The scaffold version includes additional configuration arguments such as `add_opacity_dist`, `add_cov_dist`, and `add_color_dist`, allowing for more detailed customization.
+  - The ULR view creation in the scaffold setup also passes additional parameters related to these new configuration options.
+
+![Differences in main.cpp](presentation/17.jpg)
+---
