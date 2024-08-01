@@ -351,11 +351,11 @@ This section highlights the differences in the CUDA functions within the submodu
 
 For a deeper understanding of CUDA programming, please refer to the included tutorial PDF:
 
-[CUDA Tutorial PDF](path/to/your/cuda_tutorial.pdf)
+[CUDA Tutorial PDF](reduction-cuda.pdf)
 
 请参阅所附的 CUDA 教程 PDF 以更深入地了解 CUDA 编程：
 
-[CUDA 教程 PDF](path/to/your/cuda_tutorial.pdf)
+[CUDA 教程 PDF](reduction-cuda.pdf)
 
 
 
