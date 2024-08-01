@@ -159,4 +159,17 @@ The rendering pipeline further involves the following stages:
 ![Pipeline](presentation/8.jpg)
 
 ---
+## Load the Files (continued)
 
+This stage of the pipeline involves creating the scene and loading the necessary files.
+
+这一阶段涉及创建场景和加载必要的文件。
+
+1. **Create the scene (创建场景)**:
+   - Create the mesh (in proxy) with `input.ply`: 使用 `input.ply` 创建网格（代理中）
+
+2. **Gaussian View (高斯视图)**:
+   - Create the ULR view and store the `point_cloud.ply` in variables: 创建 ULR 视图并在变量中存储 `point_cloud.ply`
+
+![Load the Files](presentation/9.jpg)
+---
