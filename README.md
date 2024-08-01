@@ -82,6 +82,7 @@ SIBR 中的渲染管道分为几个阶段：
 2. **Inputs (输入)**: Storing the inputs into variables for later use.
 3. **Rendering (渲染过程)**: The rendering process based on the provided inputs.
 4. **2D image (二维图像)**: Producing the final 2D image as the result of the rendering.
+   
 
 1. **Command line (命令行)**：从命令行启动播放器。
 2. **Inputs (输入)**：将输入存储到变量中以供以后使用。
@@ -125,11 +126,6 @@ The rendering pipeline further involves the following stages:
    - Set different options: 设置不同的选项
    - Store point cloud path in variable: 在变量中存储点云的路径
 
-1. **Command line (命令行)**：
-   - Path of our folder: 文件夹的路径
-   - Store command line in a variable: 将命令行存储在变量中
-   - Set different options: 设置不同的选项
-   - Store point cloud path in variable: 在变量中存储点云的路径
 
 ![Pipeline](presentation/6.jpg)
 
