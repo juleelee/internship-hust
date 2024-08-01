@@ -270,7 +270,7 @@ This section highlights the differences in the `main.cpp` file between the origi
 ---
 ### Differences in `GaussianView.cpp`
 
-#### Differences in `RichPoint` and `AnchorPoint` Structs (19.jpg)
+#### Differences in `RichPoint` and `AnchorPoint` Structs 
 
 This section highlights the differences in the `GaussianView.cpp` file, particularly focusing on the `RichPoint` and `AnchorPoint` structs, as well as the parameter list and constructor in the original versus the scaffold version.
 
@@ -288,7 +288,7 @@ This section highlights the differences in the `GaussianView.cpp` file, particul
 
 ---
 
-### Differences in `onRenderIBR` Function (20.jpg)
+### Differences in `onRenderIBR` Function 
 
 #### Steps Comparison in `onRenderIBR` Function
 
@@ -303,6 +303,60 @@ This section compares the steps involved in the `onRenderIBR` function between t
   - The scaffold version of `onRenderIBR` adds several additional steps such as filtering visible Gaussians, computing view parameters, and calculating neural opacity, leading to a more refined and controlled rendering process.
 
 ![Differences in onRenderIBR](presentation/20.jpg)
+
+### Differences in Submodule CUDA Functions
+
+This section highlights the differences in the CUDA functions within the submodule used by `GaussianView.cpp`. These differences reflect modifications in how Gaussian splats are processed, particularly in the scaffold setup.
+
+本节重点介绍了在 `GaussianView.cpp` 中使用的子模块中的 CUDA 函数的差异。这些差异反映了在脚手架设置中处理高斯斑点的修改。
+
+#### 1. Differences in `rasterize_points.h` and `ext.cpp` 
+
+- **Original (原始)**:
+  - The original implementation provides basic CUDA functions for rasterizing Gaussian points.
+
+- **Scaffold (脚手架)**:
+  - The scaffold version introduces additional parameters and functions, providing more control over the rasterization process, including handling of pre-filtered data and debugging options.
+
+![Differences in Submodule CUDA Functions - 21](presentation/21.jpg)
+
+---
+
+#### 2. Differences in `__init__.py` and `forward.cu` 
+
+- **Original (原始)**:
+  - The original code does not include advanced filtering or preprocessing steps for Gaussian points.
+
+- **Scaffold (脚手架)**:
+  - The scaffold version adds significant preprocessing and filtering steps in the CUDA code, which are integrated into the Python interface through the `__init__.py` file.
+
+![Differences in Submodule CUDA Functions - 22](presentation/22.jpg)
+
+---
+
+#### 3. Differences in `rasterizer_impl.cu` and Directory Structure 
+
+
+- **Original (原始)**:
+  - The directory structure and CUDA implementation files are simpler, focusing on core rasterization tasks.
+
+- **Scaffold (脚手架)**:
+  - The scaffold setup introduces a more complex directory structure with additional files for handling different aspects of Gaussian splat rasterization, such as backward propagation and reweighted sampling.
+
+![Differences in Submodule CUDA Functions - 23](presentation/23.jpg)
+
+---
+
+### Additional Resources
+
+For a deeper understanding of CUDA programming, please refer to the included tutorial PDF:
+
+[CUDA Tutorial PDF](path/to/your/cuda_tutorial.pdf)
+
+请参阅所附的 CUDA 教程 PDF 以更深入地了解 CUDA 编程：
+
+[CUDA 教程 PDF](path/to/your/cuda_tutorial.pdf)
+
 
 
 
