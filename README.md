@@ -173,3 +173,53 @@ This stage of the pipeline involves creating the scene and loading the necessary
 
 ![Load the Files](presentation/9.jpg)
 ---
+
+## Rendering Pipeline (continued)
+
+The rendering pipeline further involves the following stages:
+
+渲染管道还包括以下阶段：
+
+1. **Rendering (渲染过程)**：基于提供的输入进行渲染过程。
+
+![Pipeline](presentation/10.jpg)
+---
+
+## Rendering Process (continued)
+
+
+![Rendering Process](presentation/12.jpg)
+
+This section outlines the detailed steps involved in the rendering process, including various operations such as checking the render mode, converting view and projection matrices, and handling CUDA operations.
+
+此部分概述了渲染过程中涉及的详细步骤，包括检查渲染模式、转换视图和投影矩阵以及处理 CUDA 操作。
+
+1. **Render Mode Check (渲染模式检查)**:
+   - If the current mode is "Ellipsoids," the `gaussianRenderer->process` method is called to process the ellipsoids.
+   - If the current mode is "Initial Points," the `pointbasedrenderer->process` method is called to process the initial points.
+
+2. **Conversion of View and Projection Matrices (视图和投影矩阵的转换)**:
+   - Convert the view and projection to the target coordinate system.
+
+3. **Calculation of Additional View Parameters (附加视图参数的计算)**:
+   - Compute additional view parameters like `tan_fovy` and `tan_fovx`.
+
+4. **Copy Frame-Dependent Data to GPU (将帧相关数据复制到 GPU)**:
+   - Copy necessary data like view and projection matrices to GPU memory.
+
+5. **Mapping of the OpenGL Resource for use with CUDA (映射 OpenGL 资源，以便与 CUDA 配合使用)**:
+   - Map the OpenGL resource to make it accessible for CUDA operations.
+
+6. **Rasterization (光栅化)**:
+   - Rasterize Gaussian splats into `image_cuda`.
+
+7. **Unmapping the OpenGL Resource for use with OpenGL (取消映射 OpenGL 资源，以便与 OpenGL 配合使用)**:
+   - Unmap the OpenGL resource, making it available for use with OpenGL.
+
+8. **Copy Image Content to Framebuffer (将图像内容复制到帧缓冲区)**:
+   - Copy the final image data to the framebuffer for display.
+
+9. **CUDA Error Handling (CUDA 错误处理)**:
+   - Manage any potential errors that occur during CUDA operations.
+
+![Rendering Process](presentation/13.jpg)
