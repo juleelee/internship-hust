@@ -112,6 +112,7 @@ SIBR 项目包含几个关键文件和目录，这些文件和目录构成了渲
   - **cfg_args**: 渲染过程的配置参数。
   - **input**: 保存渲染管道输入文件的目录。
 
+
 ---
 
 ## Rendering Pipeline (continued)
@@ -126,39 +127,36 @@ The rendering pipeline further involves the following stages:
    - Set different options: 设置不同的选项
    - Store point cloud path in variable: 在变量中存储点云的路径
 
-
 ![Pipeline](presentation/6.jpg)
 
 ---
 
-2. **Load the files (加载文件)**:
-   - Create the scene: 场景创建
-   - Load point cloud and other inputs: 加载点云和其他输入
+## Command Line (continued)
 
-   **Load the files (加载文件)**：
-   - Create the scene: 场景创建
-   - Load point cloud and other inputs: 加载点云和其他输入
+Further details on using the command line in SIBR:
 
-![Load the files](presentation/7.jpg)
+有关在 SIBR 中使用命令行的更多详细信息：
 
-3. **Rendering (渲染)**:
-   - Convert inputs into visual output: 将输入转换为视觉输出
-   - Process each point: 处理每个点
+1. **Command line (命令行)**:
+   - Path of our folder: 文件夹的路径
+   - Store command line in a variable: 将命令行存储在变量中
+   - Set different options: 设置不同的选项
+   - Store point cloud path in variable: 在变量中存储点云的路径
 
-   **Rendering (渲染)**：
-   - Convert inputs into visual output: 将输入转换为视觉输出
-   - Process each point: 处理每个点
+![Command Line](presentation/7.jpg)
 
-![Rendering](presentation/8.jpg)
 
 ---
 
-4. **Final Result (最终结果)**:
-   - Output the 2D image: 输出二维图像
-   - Display the rendered image: 显示渲染后的图像
+## Rendering Pipeline (continued)
 
-   **Final Result (最终结果)**：
-   - Output the 2D image: 输出二维图像
-   - Display the rendered image: 显示渲染后的图像
+The rendering pipeline further involves the following stages:
 
-![Final Result](presentation/9.jpg)
+渲染管道还包括以下阶段：
+
+1. **Inputs (输入)**：将输入存储到变量中以供以后使用。
+
+![Pipeline](presentation/8.jpg)
+
+---
+
