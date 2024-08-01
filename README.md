@@ -357,6 +357,36 @@ For a deeper understanding of CUDA programming, please refer to the included tut
 
 [CUDA 教程 PDF](reduction-cuda.pdf)
 
+---
+### Differences in Spacetime Method
+
+![Differences in Spacetime File Structures](presentation/24.jpg)
+
+This section covers the differences when using the Spacetime method, which allows rendering in 4D by incorporating the dimension of time. This method provides enhanced capabilities for dynamic scenes.
+
+本节介绍了使用 Spacetime 方法时的差异，该方法通过加入时间维度来实现 4D 渲染。该方法为动态场景提供了更强的渲染能力。
+
+
+#### 1. Differences in File Structures 
+
+- **Original (原始)**:
+  - The original file structure includes basic elements like `point_cloud`, `cameras`, and `cfg_args`, with configurations tailored for static scene rendering.
+
+- **Spacetime (Spacetime)**:
+  - The Spacetime version modifies the `cfg_args` and `point_cloud` structures to handle motion data and other dynamic scene elements, enabling the system to process time-variant inputs.
+
+
+#### 2. Differences in Configuration Arguments
+
+- **Original (原始)**:
+  - The original `cfg_args` is configured for a standard 3D scene, with basic options set for static rendering.
+
+- **Spacetime (Spacetime)**:
+  - The Spacetime configuration introduces new parameters such as `data_device`, `loader`, and `model_path`, specifically designed to manage 4D data, including motion vectors and temporal resolution adjustments.
+
+![Differences in Spacetime Configuration](presentation/25.jpg)
+
+---
 
 
 
