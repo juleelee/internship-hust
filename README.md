@@ -358,7 +358,7 @@ For a deeper understanding of CUDA programming, please refer to the included tut
 [CUDA 教程 PDF](reduction-cuda.pdf)
 
 ---
-### Differences in Spacetime Method
+## Differences in Spacetime Method
 
 ![Differences in Spacetime File Structures](presentation/24.jpg)
 
