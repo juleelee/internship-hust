@@ -465,4 +465,41 @@ The submodule folder contains the `.cu` files, which enable fast calculations us
 
 ![Differences in Submodule Folder](presentation/29.jpg)
 
+---
+
+### Additional Resources
+
+For a deeper understanding of CUDA programming, please refer to the included tutorial PDF:
+
+[CUDA Tutorial PDF](reduction-cuda.pdf)
+
+请参阅所附的 CUDA 教程 PDF 以更深入地了解 CUDA 编程：
+
+[CUDA 教程 PDF](reduction-cuda.pdf)
+
+---
+
+
+## Conclusion: Files to Modify for Scaffold and/or Spacetime
+
+### 1. **main.cpp**: 
+   - **Purpose**: For the config argument (`cfg_arg`) if needed.
+   - **Method**: Spacetime and/or Scaffold
+
+### 2. **GaussianView.cpp**:
+   - **Purpose**: Modifications in `loadPLY` and `onRenderIBR`.
+   - **Method**: Spacetime and Scaffold
+
+### 3. **backward_reweighted.cu**, **forward_reweighted.cu**:
+   - **Purpose**: Add new files in `submodules\diff-gaussian-rasterization\cuda_rasterizer\`.
+   - **Method**: Scaffold
+
+### 4. **forward.cu**, **rasterize_impl.cu**:
+   - **Purpose**: Modify files in `submodules\diff-gaussian-rasterization\cuda_rasterizer\`.
+   - **Method**: Spacetime and Scaffold
+
+### 5. **rasterize_point.cu**:
+   - **Purpose**: Modify files in `submodules\diff-gaussian-rasterization\`.
+   - **Method**: Scaffold
+![Conclusion](presentation/30.jpg)
 
