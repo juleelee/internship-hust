@@ -412,4 +412,37 @@ This section covers the differences when using the Spacetime method, which allow
 ![Differences in Spacetime Configuration](presentation/27.jpg)
 
 
+### Differences: onRenderIBR Function
+
+The `onRenderIBR` function differs between the original implementation and the Spacetime implementation. The steps in each version are outlined below:
+
+`onRenderIBR` 函数在原始实现和Spacetime实现之间存在差异。每个版本的步骤如下：
+
+### Original Implementation (原始实现)
+
+1. Render Mode Check (渲染模式检查)
+2. Conversion of View and Projection Matrices (视图和投影矩阵的转换)
+3. Calculation of Additional View Parameters (附加视图参数的计算)
+4. Copy Frame-Dependent Data to GPU (将帧相关数据复制到GPU)
+5. Mapping of the OpenGL Resource for Use with CUDA (映射OpenGL资源，以便与CUDA配合使用)
+6. Rasterization (光栅化)
+7. Unmapping the OpenGL Resource for Use with OpenGL (取消映射OpenGL资源，以便与OpenGL.NET资源一起使用)
+8. Copy Image Content to Framebuffer (将图像内容复制到帧缓冲区)
+9. CUDA Error Handling (CUDA错误处理)
+
+### Spacetime Implementation (Spacetime实现)
+
+1. Rendering Mode Verification (渲染模式验证)
+2. Conversion of View and Projection Matrices (转换视图和投影矩阵)
+3. Calculation of Additional View Parameters (计算其他视图参数)
+4. Copying Frame-Dependent Data to GPU (将帧相关数据复制到GPU)
+5. Mapping OpenGL Resource for Use with CUDA (映射OpenGL资源，以便与CUDA配合使用)
+6. Rasterization (栅格化)
+7. **Video Time Management (视频时间管理)**
+8. **CUDA Rasterizer Call (CUDA光栅调用)**
+9. Unmapping OpenGL Resource for Use with OpenGL (取消映射OpenGL资源，以便与OpenGL.NET资源一起使用)
+10. Copying Image Content to the Framebuffer (将图像内容复制到帧缓冲区)
+11. CUDA Error Management (CUDA错误管理)
+
+![Differences in onRenderIBR Function](presentation/28.jpg)
 
