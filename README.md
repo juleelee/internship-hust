@@ -114,6 +114,18 @@ SIBR 项目包含几个关键文件和目录，这些文件和目录构成了渲
   - **input**: 保存渲染管道输入文件的目录。
 
 
+Recommended checkpoint  structure in the model path location:
+
+```
+<location>
+|---point_cloud
+|   |---point_cloud.ply
+|---cfg_args
+|---cameras.json
+(|---input.ply)
+```
+
+
 ---
 
 ## Rendering Pipeline (continued)
@@ -241,6 +253,21 @@ This section introduces the differences related to the scaffold in the SIBR proj
 
 This section highlights the differences between the original setup and the scaffold setup in the SIBR project, particularly focusing on the `point_cloud` and `cfg_args` files.
 
+Recommended checkpoint  structure in the model path location for the Scaffold method:
+
+```
+<location>
+|---point_cloud
+|   |---point_cloud.ply
+|   |---color_mlp.pt
+|   |---cov_mlp.pt
+|   |---opacity_mlp.pt
+(|   |---embedding_appearance.pt)
+|---cfg_args
+|---cameras.json
+(|---input.ply)
+```
+
 本节重点介绍了 SIBR 项目中原始设置与脚手架设置之间的差异，特别是 `point_cloud` 和 `cfg_args` 文件的差异。
 
 - **Original (原始)**:
@@ -367,6 +394,18 @@ This section covers the differences when using the Spacetime method, which allow
 
 
 ### 1. Differences in File Structures 
+
+Recommended checkpoint  structure in the model path location for the spacetime method:
+
+```
+<location>
+|---point_cloud
+|   |---point_cloud.ply
+|---cfg_args
+|---cameras.json
+(|---input.ply)
+```
+
 
 - **Original (原始)**:
   - The original file structure includes basic elements like `point_cloud`, `cameras`, and `cfg_args`, with configurations tailored for static scene rendering.
