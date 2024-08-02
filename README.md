@@ -90,8 +90,9 @@ SIBR 中的渲染管道分为几个阶段：
 4. **2D image (二维图像)**：生成最终的二维图像作为渲染的结果。
 
 ![Pipeline](presentation/4.jpg)
-
 ---
+
+
 ## Project Structure (continued)
 
 ### Files
@@ -129,7 +130,7 @@ The rendering pipeline further involves the following stages:
 
 ![Pipeline](presentation/6.jpg)
 
----
+
 
 ## Command Line (continued)
 
@@ -223,7 +224,8 @@ This section outlines the detailed steps involved in the rendering process, incl
    - Manage any potential errors that occur during CUDA operations.
 
 ![Rendering Process](presentation/13.jpg)
----
+
+----
 
 ## Scaffold Differences (差异)
 
@@ -251,7 +253,6 @@ This section highlights the differences between the original setup and the scaff
 
 ![Differences](presentation/16.jpg)
 
----
 ## Differences in `main.cpp` (差异)
 
 This section highlights the differences in the `main.cpp` file between the original and scaffold setups in the SIBR project.
@@ -267,10 +268,10 @@ This section highlights the differences in the `main.cpp` file between the origi
   - The ULR view creation in the scaffold setup also passes additional parameters related to these new configuration options.
 
 ![Differences in main.cpp](presentation/17.jpg)
----
-### Differences in `GaussianView.cpp`
 
-#### Differences in `RichPoint` and `AnchorPoint` Structs 
+## Differences in `GaussianView.cpp`
+
+### Differences in `RichPoint` and `AnchorPoint` Structs 
 
 This section highlights the differences in the `GaussianView.cpp` file, particularly focusing on the `RichPoint` and `AnchorPoint` structs, as well as the parameter list and constructor in the original versus the scaffold version.
 
@@ -286,11 +287,11 @@ This section highlights the differences in the `GaussianView.cpp` file, particul
 
 ![Differences in GaussianView.cpp](presentation/19.jpg)
 
----
 
-### Differences in `onRenderIBR` Function 
 
-#### Steps Comparison in `onRenderIBR` Function
+## Differences in `onRenderIBR` Function 
+
+### Steps Comparison in `onRenderIBR` Function
 
 This section compares the steps involved in the `onRenderIBR` function between the original and scaffold versions in the `GaussianView.cpp` file. The scaffold version includes more detailed operations for handling and processing the Gaussian splats.
 
@@ -304,13 +305,13 @@ This section compares the steps involved in the `onRenderIBR` function between t
 
 ![Differences in onRenderIBR](presentation/20.jpg)
 
-### Differences in Submodule CUDA Functions
+## Differences in Submodule CUDA Functions
 
 This section highlights the differences in the CUDA functions within the submodule used by `GaussianView.cpp`. These differences reflect modifications in how Gaussian splats are processed, particularly in the scaffold setup.
 
 本节重点介绍了在 `GaussianView.cpp` 中使用的子模块中的 CUDA 函数的差异。这些差异反映了在脚手架设置中处理高斯斑点的修改。
 
-#### 1. Differences in `rasterize_points.h` and `ext.cpp` 
+### 1. Differences in `rasterize_points.h` and `ext.cpp` 
 
 - **Original (原始)**:
   - The original implementation provides basic CUDA functions for rasterizing Gaussian points.
@@ -320,9 +321,9 @@ This section highlights the differences in the CUDA functions within the submodu
 
 ![Differences in Submodule CUDA Functions - 21](presentation/21.jpg)
 
----
 
-#### 2. Differences in `__init__.py` and `forward.cu` 
+
+### 2. Differences in `__init__.py` and `forward.cu` 
 
 - **Original (原始)**:
   - The original code does not include advanced filtering or preprocessing steps for Gaussian points.
@@ -332,9 +333,7 @@ This section highlights the differences in the CUDA functions within the submodu
 
 ![Differences in Submodule CUDA Functions - 22](presentation/22.jpg)
 
----
-
-#### 3. Differences in `rasterizer_impl.cu` and Directory Structure 
+### 3. Differences in `rasterizer_impl.cu` and Directory Structure 
 
 
 - **Original (原始)**:
