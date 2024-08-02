@@ -135,12 +135,6 @@ Recommended checkpoint  structure in the model path location:
 ```
 
 
-The cfg_args file is not as critical, as it primarily allows the addition of optional settings to the player, such as enabling a white background.
-cfg_args 文件并不是非常重要，因为它主要用于向播放器添加可选设置，例如启用白色背景。
-
-The most important file is point_cloud.ply, which contains all the essential information about our Gaussian point cloud: position, normal vectors, color, opacity, rotation, scale, and more. All these details will later be stored in appropriate variables for use in the rendering process.
-最重要的文件是 point_cloud.ply，它包含了我们高斯点云的所有关键信息：位置、法向量、颜色、不透明度、旋转、比例等。所有这些细节将在后续存储到适当的变量中，以便在渲染过程中使用。
-
 - **Configuration Arguments (cfg_args)**: While not essential, this file allows customization options for the player, such as background color adjustments. It's a way to enhance the user experience based on specific needs or preferences, such as enabling a white background.
   - **配置参数 (cfg_args)**：尽管不是必需的，这个文件允许为播放器添加自定义选项，例如背景颜色调整。它是一种根据特定需求或偏好增强用户体验的方法，例如启用白色背景。
 
@@ -157,10 +151,6 @@ The rendering pipeline further involves the following stages:
 渲染管道还包括以下阶段：
 
 1. **Command line (命令行)**:
-   - Path of our folder: 文件夹的路径
-   - Store command line in a variable: 将命令行存储在变量中
-   - Set different options: 设置不同的选项
-   - Store point cloud path in variable: 在变量中存储点云的路径
 
 ![Pipeline](presentation/6.jpg)
 
@@ -180,6 +170,24 @@ Further details on using the command line in SIBR:
 
 ![Command Line](presentation/7.jpg)
 
+After building the project from the source code, not everything works as expected. Some small adjustments are necessary. I used MobaXterm to get a graphical interface that connects through SSH, but the simplest and fastest solution is to use a Windows machine with a good graphics card. The problem with doing it remotely is that the FPS (frames per second) are very low.
+
+从源代码构建项目后，并非所有内容都按预期工作。需要进行一些小的调整。我使用了 MobaXterm 获取通过 SSH 连接的图形界面，但最简单、最快速的解决方案是使用具有良好显卡的 Windows 机器。远程操作的问题在于 FPS（每秒帧数）非常低。
+
+It's crucial to ensure that all the versions required are exactly the same as those specified on the Gaussian-splatting GitHub repository (e.g., Visual Studio 2019, CUDA 11.8, etc.). Otherwise, you may encounter numerous issues when attempting to build the project.
+
+确保所有所需版本与 Gaussian-splatting GitHub 仓库中指定的版本完全一致（例如，Visual Studio 2019、CUDA 11.8 等）至关重要。否则，在构建项目时可能会遇到许多问题。
+
+Here is the command that successfully launched the viewer:
+
+以下是成功启动查看器的命令：
+
+```bash
+cd path-to-directory/gaussian-splatting/SIBR_viewers/install/shaders/core
+```
+```bash
+MESA_GL_VERSION_OVERRIDE=4.5 ../../bin/SIBR_gaussianViewer_app -m "path-to-your-model"
+```
 
 ---
 
