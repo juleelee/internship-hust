@@ -87,8 +87,6 @@ SIBR 中的渲染管道分为几个阶段：
 2. **Inputs (输入)**: Storing the inputs into variables for later use.
 3. **Rendering (渲染过程)**: The rendering process based on the provided inputs.
 4. **2D image (二维图像)**: Producing the final 2D image as the result of the rendering.
-   
-___
 
 1. **Command line (命令行)**：从命令行启动播放器。
 2. **Inputs (输入)**：将输入存储到变量中以供以后使用。
@@ -96,6 +94,15 @@ ___
 4. **2D image (二维图像)**：生成最终的二维图像作为渲染的结果。
 
 ![Pipeline](presentation/4.jpg)
+
+Now, let's delve into the pipeline of this project. We will start by looking at the overall concept and situation, and then gradually move into more specific details. 
+
+接下来，我们将深入分析该项目的管道。我们将首先从整体概念和情况入手，然后逐渐深入到更具体的细节中。
+
+First, we will analyze the basic structure of the viewer for the Gaussian splatting method. Then, we will examine the differences between the Scaffold and Spacetime methods. It's important to note that both of these methods build upon the base player (Gaussian-splatting) and introduce certain modifications to it.
+
+首先，我们将分析用于高斯点云方法的查看器的基本结构。然后，我们将研究 Scaffold 和 Spacetime 方法之间的差异。需要注意的是，这两种方法都是在基本播放器（高斯点云）基础上进行修改的。
+
 ---
 
 
