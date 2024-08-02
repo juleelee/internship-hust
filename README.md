@@ -83,15 +83,11 @@ The rendering pipeline in SIBR is broken down into several stages:
 
 SIBR 中的渲染管道分为几个阶段：
 
-1. **Command line (命令行)**: Launching the player from the command line.
-2. **Inputs (输入)**: Storing the inputs into variables for later use.
-3. **Rendering (渲染过程)**: The rendering process based on the provided inputs.
-4. **2D image (二维图像)**: Producing the final 2D image as the result of the rendering.
+1. **Command line (命令行)**: Launching the player from the command line. 从命令行启动播放器。
+2. **Inputs (输入)**: Storing the inputs into variables for later use. 将输入存储到变量中以供以后使用。
+3. **Rendering (渲染过程)**: The rendering process based on the provided inputs. 基于提供的输入进行渲染过程。
+4. **2D image (二维图像)**: Producing the final 2D image as the result of the rendering. 生成最终的二维图像作为渲染的结果。
 
-1. **Command line (命令行)**：从命令行启动播放器。
-2. **Inputs (输入)**：将输入存储到变量中以供以后使用。
-3. **Rendering (渲染过程)**：基于提供的输入进行渲染过程。
-4. **2D image (二维图像)**：生成最终的二维图像作为渲染的结果。
 
 ![Pipeline](presentation/4.jpg)
 
