@@ -10,6 +10,11 @@ SIBR 项目包含超过 246 个文件，结构划分为多个主要模块，如�
 
 ![Introduction](presentation/2.jpg)
 
+The project is quite complex, but not all files need to be modified. Only the most important ones require changes. Specifically, some functions that store our `point_cloud.ply` file need to be adapted. Additionally, the functions responsible for rendering the Gaussian cloud based on the characteristics we have chosen to retain or discard must be modified. Lastly, other files related to efficient computation on the GPU (coded in CUDA) also require adjustments.
+
+这个项目相当复杂，但并不是所有文件都需要修改。只有最重要的文件需要更改。具体来说，存储我们 `point_cloud.ply` 文件的某些函数需要进行调整。此外，负责根据我们选择保留或丢弃的特性渲染高斯点云的函数也必须修改。最后，与 GPU 上高效计算相关的其他文件（用 CUDA 编写）也需要进行调整。
+
+
 ---
 
 ## Project Structure
@@ -83,6 +88,7 @@ SIBR 中的渲染管道分为几个阶段：
 3. **Rendering (渲染过程)**: The rendering process based on the provided inputs.
 4. **2D image (二维图像)**: Producing the final 2D image as the result of the rendering.
    
+___
 
 1. **Command line (命令行)**：从命令行启动播放器。
 2. **Inputs (输入)**：将输入存储到变量中以供以后使用。
