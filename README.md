@@ -135,6 +135,21 @@ Recommended checkpoint  structure in the model path location:
 ```
 
 
+The cfg_args file is not as critical, as it primarily allows the addition of optional settings to the player, such as enabling a white background.
+
+  - cfg_args 文件并不是非常重要，因为它主要用于向播放器添加可选设置，例如启用白色背景。
+
+The most important file is point_cloud.ply, which contains all the essential information about our Gaussian point cloud: position, normal vectors, color, opacity, rotation, scale, and more. All these details will later be stored in appropriate variables for use in the rendering process.
+
+  - 最重要的文件是 point_cloud.ply，它包含了我们高斯点云的所有关键信息：位置、法向量、颜色、不透明度、旋转、比例等。所有这些细节将在后续存储到适当的变量中，以便在渲染过程中使用。
+
+- **Configuration Arguments (cfg_args)**: While not essential, this file allows customization options for the player, such as background color adjustments. It's a way to enhance the user experience based on specific needs or preferences.
+  - **配置参数 (cfg_args)**：尽管不是必需的，这个文件允许为播放器添加自定义选项，例如背景颜色调整。它是一种根据特定需求或偏好增强用户体验的方法。
+
+- **Point Cloud Data (point_cloud.ply)**: This file is the cornerstone of the rendering process, holding detailed information about each point in the Gaussian point cloud, such as position, color, and opacity. These attributes are crucial for accurate rendering and will be utilized extensively in subsequent processes.
+  - **点云数据 (point_cloud.ply)**：这个文件是渲染过程的基石，包含了关于高斯点云中每个点的详细信息，例如位置、颜色和不透明度。这些属性对于准确渲染至关重要，并将在后续过程中广泛使用。
+
+
 ---
 
 ## Rendering Pipeline (continued)
