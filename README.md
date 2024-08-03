@@ -240,6 +240,8 @@ The rendering pipeline further involves the following stages:
 ## Rendering Process (continued)
 
 
+在 `main.cpp` 的主循环中：`onRender` 函数调用其他渲染函数，而这些渲染函数又调用其他渲染函数，最终调用 `onRenderIBR`。
+
 ![Rendering Process](presentation/12.jpg)
 
 This section outlines the detailed steps involved in the rendering process, including various operations such as checking the render mode, converting view and projection matrices, and handling CUDA operations.
@@ -275,6 +277,11 @@ This section outlines the detailed steps involved in the rendering process, incl
    - Manage any potential errors that occur during CUDA operations.
 
 ![Rendering Process](presentation/13.jpg)
+
+`onRenderIBR` is therefore an important function that will also need to be modified in `GaussianView.cpp`. We will examine in more detail how it could be modified by drawing inspiration from the viewers of Spacetime and Scaffold.
+
+因此，`onRenderIBR` 是一个重要的函数，也需要在 `GaussianView.cpp` 中进行修改。我们将更详细地研究如何借鉴 Spacetime 和 Scaffold 的查看器对其进行修改。
+
 
 ----
 
