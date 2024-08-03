@@ -204,7 +204,7 @@ The rendering pipeline further involves the following stages:
 ---
 ## Load the Files (continued)
 
-This stage of the pipeline involves creating the scene and loading the necessary files.
+### This stage of the pipeline involves creating the scene and loading the necessary files.
 
 这一阶段涉及创建场景和加载必要的文件。
 
@@ -215,6 +215,15 @@ This stage of the pipeline involves creating the scene and loading the necessary
    - Create the ULR view and store the `point_cloud.ply` in variables: 创建 ULR 视图并在变量中存储 `point_cloud.ply`
 
 ![Load the Files](presentation/9.jpg)
+
+`input.ply` is not very important and can be removed without significantly affecting the final rendering. What is crucial is `point_cloud.ply`, and the `loadPly` function in `gaussianView.cpp` is responsible for storing the information in appropriate variables for each Gaussian.
+
+`input.ply` 不是很重要，可以删除，对最终渲染不会有太大影响。关键是 `point_cloud.ply`，而 `gaussianView.cpp` 中的 `loadPly` 函数负责将每个高斯的相关信息存储在适当的变量中。
+
+`loadPly` is therefore an important function that will need to be modified in the new method and adapted according to the information we want to store.
+
+因此，`loadPly` 是一个相当重要的函数，在新方法中需要对其进行修改，并根据我们想要存储的信息进行适配。
+
 ---
 
 ## Rendering Pipeline (continued)
