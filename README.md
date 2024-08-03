@@ -647,26 +647,41 @@ For a deeper understanding of CUDA programming, please refer to the included tut
 ---
 
 
-## Conclusion: Files to Modify for Scaffold and/or Spacetime
+## Conclusion: Files to Modify for Scaffold and/or Spacetime.
+结论：需要修改的文件用于 Scaffold 和/或 Spacetime
+
+
 
 ### 1. **main.cpp**: 
    - **Purpose**: For the config argument (`cfg_arg`) if needed.
+   - **目的**: 用于配置参数 (`cfg_arg`)（如有需要）。
    - **Method**: Spacetime and/or Scaffold
+   - **方法**: Spacetime 和/或 Scaffold
 
 ### 2. **GaussianView.cpp**:
    - **Purpose**: Modifications in `loadPLY` and `onRenderIBR`.
+   - **目的**: 修改 `loadPLY` 和 `onRenderIBR`。
    - **Method**: Spacetime and Scaffold
+   - **方法**: Spacetime 和 Scaffold
 
 ### 3. **backward_reweighted.cu**, **forward_reweighted.cu**:
    - **Purpose**: Add new files in `submodules\diff-gaussian-rasterization\cuda_rasterizer\`.
+   - **目的**: 在 `submodules\diff-gaussian-rasterization\cuda_rasterizer\` 中添加新文件。
    - **Method**: Scaffold
+   - **方法**: Scaffold
 
 ### 4. **forward.cu**, **rasterize_impl.cu**:
    - **Purpose**: Modify files in `submodules\diff-gaussian-rasterization\cuda_rasterizer\`.
+   - **目的**: 修改 `submodules\diff-gaussian-rasterization\cuda_rasterizer\` 中的文件。
    - **Method**: Spacetime and Scaffold
+   - **方法**: Spacetime 和 Scaffold
 
 ### 5. **rasterize_point.cu**:
    - **Purpose**: Modify files in `submodules\diff-gaussian-rasterization\`.
+   - **目的**: 修改 `submodules\diff-gaussian-rasterization\` 中的文件。
    - **Method**: Scaffold
+   - **方法**: Scaffold
+
+
 ![Conclusion](presentation/30.jpg)
 
