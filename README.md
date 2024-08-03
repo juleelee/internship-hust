@@ -314,6 +314,8 @@ Recommended checkpoint  structure in the model path location for the Scaffold me
 (|---input.ply)
 ```
 
+## Differences Between Original and Scaffold Setup
+
 本节重点介绍了 SIBR 项目中原始设置与脚手架设置之间的差异，特别是 `point_cloud` 和 `cfg_args` 文件的差异。
 
 - **Original (原始)**:
@@ -324,7 +326,12 @@ Recommended checkpoint  structure in the model path location for the Scaffold me
   - The scaffold `point_cloud` file includes additional properties such as offsets and anchor features.
   - The `cfg_args` file in the scaffold setup includes more complex parameters, allowing for additional customization in the rendering process.
 
+In the scaffold method, MLPs (Multi-Layer Perceptrons) are used to retrieve features of the Gaussians (such as color, covariance, opacity, etc.), so these features also need to be stored in appropriate variables.
+
+在脚手架方法中，使用 MLP（多层感知器）来恢复高斯特性（如颜色、协方差、不透明度等），因此还需要将它们保存在适当的变量中。
+
 ![Differences](presentation/16.jpg)
+
 
 ## Differences in `main.cpp` (差异)
 
