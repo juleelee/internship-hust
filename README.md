@@ -299,7 +299,11 @@ This section introduces the differences related to the scaffold in the SIBR proj
 
 This section highlights the differences between the original setup and the scaffold setup in the SIBR project, particularly focusing on the `point_cloud` and `cfg_args` files.
 
-Recommended checkpoint  structure in the model path location for the Scaffold method:
+本节重点介绍了 SIBR 项目中原始设置与脚手架设置之间的差异，特别是 `point_cloud` 和 `cfg_args` 文件的差异。
+
+Recommended checkpoint structure in the model path location for the Scaffold method:
+
+建议在模型路径位置使用以下脚手架方法的检查点结构：
 
 ```
 <location>
@@ -328,7 +332,16 @@ Recommended checkpoint  structure in the model path location for the Scaffold me
 
 In the scaffold method, MLPs (Multi-Layer Perceptrons) are used to retrieve features of the Gaussians (such as color, covariance, opacity, etc.), so these features also need to be stored in appropriate variables.
 
-在脚手架方法中，使用 MLP（多层感知器）来恢复高斯特性（如颜色、协方差、不透明度等），因此还需要将它们保存在适当的变量中。
+- **Original (原始)**:
+  - 原始的 `point_cloud` 文件包含各种属性，如顶点位置、法向量和颜色。
+  - 在原始设置中，`cfg_args` 文件指定了路径、分辨率和其他渲染参数。
+
+- **Scaffold (脚手架)**:
+  - 在脚手架设置中，`point_cloud` 文件包含额外的属性，如偏移量和锚点特性。
+  - 在脚手架设置中，`cfg_args` 文件包含更复杂的参数，允许在渲染过程中进行更多自定义。
+
+在脚手架方法中，使用 MLP（多层感知器）来提取高斯特性（如颜色、协方差、不透明度等），因此这些特性也需要保存在适当的变量中。
+
 
 ![Differences](presentation/16.jpg)
 
@@ -346,6 +359,15 @@ This section highlights the differences in the `main.cpp` file between the origi
 - **Scaffold (脚手架)**:
   - The scaffold version includes additional configuration arguments such as `add_opacity_dist`, `add_cov_dist`, and `add_color_dist`, allowing for more detailed customization.
   - The ULR view creation in the scaffold setup also passes additional parameters related to these new configuration options.
+ 
+- **Original (原始)**:
+  - 原始代码处理基本的配置参数，如 `source_path`、`sh_degree` 和 `white_background`。
+  - ULR 视图的创建很简单，没有额外的参数。
+
+- **Scaffold (脚手架)**:
+  - 脚手架版本包含额外的配置参数，如 `add_opacity_dist`、`add_cov_dist` 和 `add_color_dist`，允许进行更详细的自定义。
+  - 在脚手架设置中创建 ULR 视图时，也会传递与这些新配置选项相关的额外参数。
+
 
 ![Differences in main.cpp](presentation/17.jpg)
 
@@ -364,6 +386,15 @@ This section highlights the differences in the `GaussianView.cpp` file, particul
 - **Scaffold (脚手架)**:
   - The `AnchorPoint` struct introduces additional properties such as normal, offset, and features, allowing for more complex rendering.
   - The parameters and constructor are extended to include these additional properties, providing more flexibility in the rendering process.
+ 
+- **Original (原始)**:
+  - `RichPoint` 结构体包含基本属性，如位置、缩放和旋转。
+  - 参数和构造函数更简单，属性较少。
+
+- **Scaffold (脚手架)**:
+  - `AnchorPoint` 结构体引入了额外的属性，如法向量、偏移量和特征，使渲染更加复杂。
+  - 参数和构造函数进行了扩展，以包含这些额外的属性，从而在渲染过程中提供了更大的灵活性。
+
 
 ![Differences in GaussianView.cpp](presentation/19.jpg)
 
@@ -382,6 +413,13 @@ This section compares the steps involved in the `onRenderIBR` function between t
 
 - **Scaffold (脚手架)**:
   - The scaffold version of `onRenderIBR` adds several additional steps such as filtering visible Gaussians, computing view parameters, and calculating neural opacity, leading to a more refined and controlled rendering process.
+ 
+- **Original (原始)**:
+  - 原始的 `onRenderIBR` 函数遵循简单的流程，主要关注基本操作，如视图矩阵转换、光栅化和 CUDA 错误处理。
+
+- **Scaffold (脚手架)**:
+  - 脚手架版本的 `onRenderIBR` 添加了几个额外的步骤，例如过滤可见的高斯点、计算视图参数和计算神经不透明度，从而实现更精细和可控的渲染过程。
+
 
 ![Differences in onRenderIBR](presentation/20.jpg)
 
@@ -398,6 +436,13 @@ This section highlights the differences in the CUDA functions within the submodu
 
 - **Scaffold (脚手架)**:
   - The scaffold version introduces additional parameters and functions, providing more control over the rasterization process, including handling of pre-filtered data and debugging options.
+ 
+- **Original (原始)**:
+  - 原始实现提供了用于光栅化高斯点的基本 CUDA 函数。
+
+- **Scaffold (脚手架)**:
+  - 脚手架版本引入了额外的参数和函数，为光栅化过程提供了更多的控制，包括预过滤数据的处理和调试选项。
+
 
 ![Differences in Submodule CUDA Functions - 21](presentation/21.jpg)
 
@@ -488,6 +533,12 @@ Recommended checkpoint  structure in the model path location for the spacetime m
 - **Spacetime (Spacetime)**:
   - The Spacetime version modifies the `cfg_args` and `point_cloud` structures to handle motion data and other dynamic scene elements, enabling the system to process time-variant inputs.
 
+- **Original (原始)**:
+  - 原始文件结构包括基本元素，如 `point_cloud`、`cameras` 和 `cfg_args`，这些配置适用于静态场景渲染。
+
+- **Spacetime (Spacetime)**:
+  - Spacetime 版本修改了 `cfg_args` 和 `point_cloud` 结构，以处理运动数据和其他动态场景元素，使系统能够处理时间变化的输入。
+
 
 ### 2. Differences in Configuration Arguments
 
@@ -496,6 +547,12 @@ Recommended checkpoint  structure in the model path location for the spacetime m
 
 - **Spacetime (Spacetime)**:
   - The Spacetime configuration introduces new parameters such as `data_device`, `loader`, and `model_path`, specifically designed to manage 4D data, including motion vectors and temporal resolution adjustments.
+
+- **Original (原始)**:
+  - 原始的 `cfg_args` 配置适用于标准 3D 场景，设置了用于静态渲染的基本选项。
+
+- **Spacetime (Spacetime)**:
+  - Spacetime 配置引入了新参数，如 `data_device`、`loader` 和 `model_path`，这些参数专门设计用于管理 4D 数据，包括运动向量和时间分辨率调整。
 
 ![Differences in Spacetime Configuration](presentation/25.jpg)
 
