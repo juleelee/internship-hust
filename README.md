@@ -415,14 +415,36 @@ This section highlights the differences in the CUDA functions within the submodu
 
 ### 3. Differences in `rasterizer_impl.cu` and Directory Structure 
 
+#### Differences in Submodule CUDA Functions
+
+本节重点介绍了子模块中的 CUDA 函数在原始实现和脚手架实现之间的差异。
 
 - **Original (原始)**:
   - The directory structure and CUDA implementation files are simpler, focusing on core rasterization tasks.
+  - 目录结构和 CUDA 实现文件更简单，专注于核心光栅化任务。
 
 - **Scaffold (脚手架)**:
   - The scaffold setup introduces a more complex directory structure with additional files for handling different aspects of Gaussian splat rasterization, such as backward propagation and reweighted sampling.
+  - 脚手架设置引入了更复杂的目录结构，并添加了用于处理高斯斑点光栅化不同方面的文件，如反向传播和重加权采样。
 
 ![Differences in Submodule CUDA Functions - 23](presentation/23.jpg)
+
+### Summary of Modified or Added `.cu` Files
+
+这是修改或添加的 `.cu` 文件的摘要
+
+- **Modified Files (红色标记)**:
+  - Files that have been altered to adapt to the new data structure.
+  - 为适应新数据结构而修改的文件。
+
+- **Added Files (紫色标记)**:
+  - New files introduced to optimize calculations for rendering, including the addition of new steps in the rendering process.
+  - 新引入的文件，用于优化渲染计算，包括在渲染过程中添加新的步骤。
+
+Functions are modified to adapt to the new data structure. Additional functions are added to optimize calculations for rendering, incorporating new steps in the rendering process.
+
+函数经过修改以适应新的数据结构。此外，还添加了其他函数，以优化渲染计算，并在渲染过程中引入了新的步骤。
+
 
 ---
 
