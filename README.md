@@ -560,11 +560,13 @@ Recommended checkpoint  structure in the model path location for the spacetime m
 
 ### 3. Differences GaussianView.hpp
 
-- **Original (原始)**:
+The Spacetime method utilizes additional characteristics to describe the Gaussians, specifically to understand their movement over time. This requires storing more information compared to other methods.
 
+For more details, please refer to the article: [PDF link].
 
-- **Spacetime (Spacetime)**:
+Spacetime 方法使用了额外的特性来描述高斯点，特别是为了理解它们随时间的运动。这比其他方法需要存储更多的信息。
 
+有关详细信息，请参阅文章：[PDF 链接]。
 
 ![Differences in Spacetime Configuration](presentation/26.jpg)
 
@@ -573,10 +575,6 @@ Recommended checkpoint  structure in the model path location for the spacetime m
 ### 4. Differences GaussianView.cpp
 
 
-- **Original (原始)**:
-
-
-- **Spacetime (Spacetime)**:
 
 
 ![Differences in Spacetime Configuration](presentation/27.jpg)
