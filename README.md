@@ -27,8 +27,8 @@ The project is quite complex, but not all files need to be modified. Only the mo
   - [渲染过程](#rendering-process)
 - [Scaffold Differences](#scaffold-differences)
   - [脚手架差异](#scaffold-differences)
-- [Differences in Spacetime Method](#difference-in-spacetime-method)
-  - [时空方法的差异](#difference-in-spacetime-method)
+- [Differences in Spacetime Method](#differences-in-spacetime-method)
+  - [时空方法的差异](#differences-in-spacetime-method)
 - [Conclusion](#Conclusion)
   - [结论](#Conclusion)
 
