@@ -17,6 +17,25 @@ The project is quite complex, but not all files need to be modified. Only the mo
 
 ---
 
+## Table of Contents
+
+- [Introduction](#introduction)
+  - [导言](#导言)
+- [Project Structure](#project-structure)
+  - [项目结构](#project-structure)
+- [Load the Files](#load-the-files)
+  - [加载文件](#加载文件)
+- [Rendering Process](#rendering-process)
+  - [渲染过程](#rendering-process)
+- [Scaffold Differences](#scaffold-differences)
+  - [脚手架差异](#scaffold-differences)
+- [Differences in Spacetime Method](#differences-in-spacetime-method)
+  - [时空方法的差异](#differences-in-spacetime-method)
+- [Conclusion](#Conclusion)
+  - [结论](#Conclusion)
+
+---
+
 ## Project Structure
 
 ### system
