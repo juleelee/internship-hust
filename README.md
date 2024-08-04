@@ -27,8 +27,8 @@ The project is quite complex, but not all files need to be modified. Only the mo
   - [渲染过程](#rendering-process)
 - [Scaffold Differences](#scaffold-differences)
   - [脚手架差异](#scaffold-differences)
-- [Differences in Spacetime Method](#differences-in-spacetime-method)
-  - [时空方法的差异](#differences-in-spacetime-method)
+- [Differences in Spacetime Method](#difference-in-spacetime-method)
+  - [时空方法的差异](#difference-in-spacetime-method)
 - [Conclusion](#Conclusion)
   - [结论](#Conclusion)
 
@@ -302,7 +302,7 @@ This section outlines the detailed steps involved in the rendering process, incl
 
 ----
 
-## Scaffold Differences (差异)
+## Scaffold Differences
 
 ![Scaffold Differences](presentation/15.jpg)
 
@@ -664,7 +664,8 @@ For a deeper understanding of CUDA programming, please refer to the included tut
 ---
 
 
-## Conclusion: Files to Modify for Scaffold and/or Spacetime.
+## Conclusion
+Files to Modify for Scaffold and/or Spacetime.
 结论：需要修改的文件用于 Scaffold 和/或 Spacetime
 
 
