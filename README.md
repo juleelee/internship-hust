@@ -28,6 +28,14 @@ It is important to have read the relevant articles and followed the tutorials on
   - **时空方法**： [GitHub 链接](https://github.com/oppo-us-research/SpacetimeGaussians)
 - **Scaffold Method**: [GitHub link](https://github.com/city-super/Scaffold-GS/)
   - **脚手架方法**： [GitHub 链接](https://github.com/city-super/Scaffold-GS/)
+  
+For a deeper understanding of CUDA programming, please refer to the included tutorial PDF:
+
+[CUDA Tutorial PDF](reduction-cuda.pdf)
+
+请参阅所附的 CUDA 教程 PDF 以更深入地了解 CUDA 编程：
+
+[CUDA 教程 PDF](reduction-cuda.pdf)
 
 ---
 
