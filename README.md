@@ -22,12 +22,12 @@ It is important to have read the relevant articles and followed the tutorials on
 
 请务必阅读相关文章并按照教程操作，了解如何从源文件构建每个查看器：
 
-- **Gaussian Splatting Method**: [GitHub link](#https://github.com/graphdeco-inria/gaussian-splatting)
-  - **高斯点云方法**： [GitHub 链接](#https://github.com/graphdeco-inria/gaussian-splatting)
-- **Spacetime Method**: [GitHub link](#https://github.com/oppo-us-research/SpacetimeGaussians)
-  - **时空方法**： [GitHub 链接](#https://github.com/oppo-us-research/SpacetimeGaussians)
-- **Scaffold Method**: [GitHub link](#https://github.com/city-super/Scaffold-GS/)
-  - **脚手架方法**： [GitHub 链接](#https://github.com/city-super/Scaffold-GS/)
+- **Gaussian Splatting Method**: [GitHub link](https://github.com/graphdeco-inria/gaussian-splatting)
+  - **高斯点云方法**： [GitHub 链接](https://github.com/graphdeco-inria/gaussian-splatting)
+- **Spacetime Method**: [GitHub link](https://github.com/oppo-us-research/SpacetimeGaussians)
+  - **时空方法**： [GitHub 链接](https://github.com/oppo-us-research/SpacetimeGaussians)
+- **Scaffold Method**: [GitHub link](https://github.com/city-super/Scaffold-GS/)
+  - **脚手架方法**： [GitHub 链接](https://github.com/city-super/Scaffold-GS/)
 
 ---
 
