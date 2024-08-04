@@ -14,6 +14,20 @@ The project is quite complex, but not all files need to be modified. Only the mo
 
 这个项目相当复杂，但并不是所有文件都需要修改。只有最重要的文件需要更改。具体来说，存储我们 `point_cloud.ply` 文件的某些函数需要进行调整。此外，负责根据我们选择保留或丢弃的特性渲染高斯点云的函数也必须修改。最后，与 GPU 上高效计算相关的其他文件（用 CUDA 编写）也需要进行调整。
 
+## Prerequisites
+
+### 预备知识
+
+It is important to have read the relevant articles and followed the tutorials on how to build each viewer from the source files:
+
+请务必阅读相关文章并按照教程操作，了解如何从源文件构建每个查看器：
+
+- **Gaussian Splatting Method**: [GitHub link](#https://github.com/graphdeco-inria/gaussian-splatting)
+  - **高斯点云方法**： [GitHub 链接](#https://github.com/graphdeco-inria/gaussian-splatting)
+- **Spacetime Method**: [GitHub link](#https://github.com/oppo-us-research/SpacetimeGaussians)
+  - **时空方法**： [GitHub 链接](#https://github.com/oppo-us-research/SpacetimeGaussians)
+- **Scaffold Method**: [GitHub link](#https://github.com/city-super/Scaffold-GS/)
+  - **脚手架方法**： [GitHub 链接](#https://github.com/city-super/Scaffold-GS/)
 
 ---
 
